@@ -1,0 +1,162 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #6B7280;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #8B5Cf6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #111827;
+    color: black;
+    font-size: 17px;
+    margin-bottom:10px;
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom:10px;
+    
+}
+
+header h1{
+    font-size: 2rem;
+    font-weight: 300;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+#new-task-form{
+    display:flex;
+}
+
+input, button{
+    appearance: none;
+    border:none;
+    outline:none;
+    background: none;
+}
+
+#new-task-input{
+    flex: 1 1 0%;
+    background-color:aliceblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right:20px;
+    color: black;
+    font-size: 17px;
+    
+
+}
+
+#new-task-input::placeholder{
+    color: gray;
+
+}
+
+#new-task-submit{
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    /* background-color: rgb(185, 43, 43); */
+    padding: 1rem;
+    border-radius: 1rem;
+    /* background-image: linear-gradient(to right, var(--pink),
+    var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#new-task-submit:hover {
+    background-color: rgb(185, 43, 43);
+    opacity: 0.3s;
+}
+
+#new-task-submit:active{
+    opacity: 2.6s;
+}
+main{
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{
+    padding: 1rem;
+
+}
+
+.task-list h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(40, 16, 255);
+    margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content : space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+    flex : 1 1 0%;
+}
+
+#tasks .task .content .text{
+    color: black;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+    margin-top: 10px;
+
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: rgb(235, 14, 50);
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding: 10px;
+    border-radius:10px;
+}
+
+.task .actions button:hover {
+    background-color: rgb(185, 43, 43);
+    opacity: 0.3s;
+}
+
+.task .actions button:active{
+    opacity: 2.6s;
+}
